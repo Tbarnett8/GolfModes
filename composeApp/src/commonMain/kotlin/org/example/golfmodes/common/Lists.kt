@@ -17,9 +17,27 @@ object Lists{
             false,
         ),
     )
+    val appSettings = listOf(
+        CareerListItem(
+            "Setting 1",
+            true,
+        ),
+        CareerListItem(
+            "Setting 2",
+            true,
+        ),
+        CareerListItem(
+            "Setting 3",
+            false,
+        ),
+    )
     val golfModesList = listOf(
         GolfModeItem(
-            "Standard",
+            "Standard - Stroke Play",
+            GolfModes.STANDARD
+        ),
+        GolfModeItem(
+            "Standard - Match Play",
             GolfModes.STANDARD
         ),
         GolfModeItem(
@@ -41,7 +59,23 @@ object Lists{
         GolfModeItem(
             "Break _",
             GolfModes.BREAK
-        )
+        ),
+        GolfModeItem(
+            "Wheel of Chaos",
+            GolfModes.BREAK
+        ),
+        GolfModeItem(
+            "Worst Ball",
+            GolfModes.BREAK
+        ),
+        GolfModeItem(
+            "All Sports Golf Battle",
+            GolfModes.BREAK
+        ),
+        GolfModeItem(
+            "Knockout Golf",
+            GolfModes.BREAK
+        ),
     )
 }
 

@@ -5,12 +5,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -106,10 +106,11 @@ fun BottomNavigationBar(navController: NavHostController) {
                     }
                 },
                 icon = {
-                    Icon(imageVector = navItem.icon, contentDescription = navItem.label)
-                },
-                label = {
-                    Text(text = navItem.label)
+                    Icon(
+                        imageVector = navItem.icon,
+                        contentDescription = navItem.label,
+                        modifier = Modifier.size(32.dp)
+                    )
                 },
                 alwaysShowLabel = true,
                 colors = NavigationBarItemDefaults.colors(
@@ -118,7 +119,7 @@ fun BottomNavigationBar(navController: NavHostController) {
                     selectedTextColor = Colors.TextPrimary,
                     unselectedTextColor = Colors.AppBackground,
                     indicatorColor = Color.Transparent,
-                )
+                ),
             )
         }
     }
